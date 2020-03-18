@@ -3,119 +3,165 @@
     padding: 0;
 }
 
-.cuadro1, .cuadro2 {
-    border: 2px solid rgba(58, 58, 58, 0.473);    
-    height: 600px;
-    width: 600px;
-    background-color: rgb(36, 33, 33);
-}
-
-.contend {
-    position: relative;
-    background-color: rgb(36, 33, 33);
-    width: 100%;
+header {
     height: 100vh;
-    overflow: hidden;
+    width: 100%;
     display: flex;
-}
-
-.cuadro1 {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: rgba(36, 33, 33, 0.966);
+    z-index: 10;
     position: absolute;
-    right: -100px;
-    top: -300px;
-    transform: rotate(-30deg);
 }
 
-.cuadro2 {
-    position: absolute;
-    left: -300px;
-    top: 300px;
-    transform: rotate(15deg);
+header > .navegador {
+    transition: 1s;
+    padding-right: 50px;
 }
 
-.centro {
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 600px;
-    position: relative;    
+.navegador ul li {
+    display: inline-block;
+    padding: 15px 10px;
 }
 
-.centro > p {
-    font-size: 40px;
-    color: rgba(78, 76, 78, 0.534);
-    transition: 2s;
+.navegador ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
 }
 
-.centro > .logo {
-    margin: auto;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 500;
+.centroLogo {
+    align-self: center;
+    margin-left: calc(50% - 70px);    
+}
+
+.centroLogo > .logo {
+    width: 130px;
+    height: 130px;
     display: flex;
+    cursor: pointer;
+    justify-content: space-between;
 }
 
-.logo > p {
-    font-size: 90px;
+.logo > .p {
+    align-self: center;
+    font-size: 130px;
+    padding: 0;
 }
 
-.logo > span {
-    text-align: center;
-    padding-top: 2px;
-    padding-left: 5px;
+.logo > .span {
+    padding-top: 6px;
+    padding-right: 20px;
     width: 10px;
     word-wrap: break-word;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.colores {
-    position: absolute;
-    bottom: 50px;
-    right: 30px;
-    width: 90px;
+@keyframes collap{
+    from{
+        height: 100vh;
+        background-color: rgba(36, 33, 33, 0.966);
+
+    }
+    to{
+        height: 7vh;
+        background-color: rgb(36, 33, 33);
+    }
 }
 
-.opciones {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
+@keyframes expand{
+    from{
+        height: 7vh;
+        background-color: rgb(36, 33, 33);
+    }
+    to{
+        height: 100vh;
+        background-color: rgba(36, 33, 33, 0.966);
+    }
 }
 
-.opciones a {
-    align-self: flex-end;    
+@keyframes logoSuperior{
+    from{
+        margin-left: calc(50% - 70px);
+    }
+    to{
+        margin-top: 50px;
+        margin-left: 0;
+        padding-left: 50px;
+    }
 }
 
-.opciones ul li{
-    padding-left: 15px;
-    padding-right: 100px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+@keyframes logoCentro{
+    from{
+        margin-left: 0;
+        padding-left: 50px;        
+    }
+    to{
+        margin-left: calc(50% - 70px);
+    }
 }
 
-.opciones ul li a{
-    color: white;
-    text-decoration: none;
+@keyframes logoChico {
+    from{
+        width: 130px;
+        height: 130px;
+    }
+    to{
+        width: 50px;
+        height: 50px;
+    }
 }
 
-.opciones > ul{    
-    align-self: flex-star;
-    list-style: none;
-    padding-bottom: 15px;
-    display: none;
+@keyframes logoGrande {
+    from{
+        width: 50px;
+        height: 50px;
+    }
+    to{        
+        width: 130px;
+        height: 130px;
+    }
 }
 
-.opciones:hover > ul{
-    display: block;
+@keyframes Dchico {
+    from{
+        font-size: 130px;
+    }
+    to{
+        font-size: 50px;
+    }
 }
 
-@keyframes spA {
-    0%{color: rgba(78, 76, 78, 0);}
-    50%{color: rgba(78, 76, 78, 0.534);}
-    100%{color: rgba(78, 76, 78, 0);}
+@keyframes DGrande {
+    from{
+        font-size: 50px;
+    }
+    to{
+        font-size: 130px;
+    }
+}
+
+@keyframes spanChico {
+    from{
+        font-size: 20px;
+        padding-top: 6px;
+    }
+    to{
+        padding-top: 0;
+        font-size: 8px;
+        width: 6px;
+    }
+}
+
+@keyframes spanGrande {
+    from{
+        padding-top: 0;
+        font-size: 8px;
+        width: 6px;
+    }
+    to{
+        font-size: 20px;
+        padding-top: 6px;
+    }
 }

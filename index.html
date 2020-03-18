@@ -5,54 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
     <title>Full Efectos</title>
 </head>
 
 <body>
-    <section>
-        <div class="contend">
-            <div class="cuadro1">
-            </div>
-
-            <div class="centro">
-                <p id="titulo">Yo soy Cristian Vargas Ari</p>
+    <div class="body">
+        <header>
+            <div class="centroLogo">
                 <div class="logo">
-                    <p>D</p>
-                    <span>ESIGN</span>
+                    <span class="p">D</span>
+                    <span class="span">ESIGN</span>
                 </div>
             </div>
 
-            <div class="cuadro2">
+            <nav class="navegador">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Portafolio</a></li>
+                    <li><a href="#">Codigo</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="principal">
+            <div class="contend">
+                <div class="cuadro1">
+                </div>
+
+                <div class="cuadro2">
+                </div>
+
+                <div class="centro">
+                    <p id="titulo">
+                        <span class="tit1">Yo soy Cristian Vargas Ari</span><br>
+                        <span class="tit2">Y soy Desarrollador Web</span>
+                    </p>
+                </div>
+
+                <div class="colores">
+                    <nav>
+                        <ul>
+                            <li class="opciones">
+                                <ul>
+                                    <li class="items" onclick="clickColor(0)"><a href="#">Verde</a></li>
+                                    <li class="items" onclick="clickColor(1)"><a href="#">Rojo</a></li>
+                                    <li class="items" onclick="clickColor(2)"><a href="#">Naranja</a></li>
+                                    <li class="items" onclick="clickColor(3)"><a href="#">Amarillo</a></li>
+                                    <li class="items" onclick="clickColor(4)"><a href="#">Celeste</a></li>
+                                </ul>
+                                <a href="#"><img src="images/color.png" width="40px" height="40px"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-
-            <div class="colores">
-
-                <nav>
-                    <ul>
-                        <li class="opciones">
-                            <ul>
-                                <li class="items" onclick="clickColor(0)"><a href="#">Verde</a></li>
-                                <li class="items" onclick="clickColor(1)"><a href="#">Rojo</a></li>
-                                <li class="items" onclick="clickColor(2)"><a href="#">Naranja</a></li>
-                                <li class="items" onclick="clickColor(3)"><a href="#">Amarillo</a></li>
-                                <li class="items" onclick="clickColor(4)"><a href="#">Celeste</a></li>
-                            </ul>
-                            <a href="#"><img src="images/color.png" width="40px" height="40px"></a>                            
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <style id="estiloColor">
-        .items:hover{ 
+        .items:hover {
             background-color: dimgrey;
         }
-        .logo > span, .logo > p {
+
+        .logo> span{
             color: white;
             text-shadow: 0px 0px 20px white;
         }
+
         .logo {
             border: 10px solid white;
             -moz-box-shadow: 0px 0px 30px white;
@@ -60,7 +82,7 @@
             box-shadow: 0px 0px 30px white;
         }
     </style>
-    
+
     <script src="main.js"></script>
 </body>
 
