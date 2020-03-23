@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li onclick="ocultar1()">Hombre</li>
+            <li onclick="ocultar2()">Mujer</li>
+
+            <li>Opcion 1
+                <ul class="card1">
+                    <li class="g1">item 1</li>
+                    <li class="g1">item 1</li>
+                    <li class="g1">item 1</li>
+                    <li class="g2">item 2</li>
+                    <li class="g2">item 2</li>
+                    <li class="g2">item 2</li>
+                </ul>
+            </li>
+            <li>Opcion 2
+                <ul class="card2">
+                    <li class="g1">item 1</li>
+                    <li class="g1">item 1</li>
+                    <li class="g1">item 1</li>
+                    <li class="g2">item 2</li>
+                    <li class="g2">item 2</li>
+                    <li class="g2">item 2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        var doc = document.getElementsByClassName("card1")[0];
+        var doc2 = document.getElementsByClassName("card2")[0];
+
+        function ocultar1() {
+            doc.style.visibility = "visible";
+            doc2.style.visibility = "hidden";
+        }
+
+        function ocultar2() {
+            doc.style.visibility = "hidden";
+            doc2.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>

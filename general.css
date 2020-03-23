@@ -31,33 +31,16 @@
 
 .centro {
     margin: auto;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    width: 600px;
+    flex-direction: column-reverse;
+    height: 100vh;
+    width: 100vw;
     position: relative;
+    overflow-y: scroll;
 }
 
-.titulo {
-    position: relative;
-}
-
-#titulo .tit2, .tit1{
-    font-size: 40px;
-    color: white;
-    text-align: center;
-}
-
-#titulo .tit1 {
-    animation: title1 10s infinite;
-}
-
-#titulo .tit2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    animation: title2 10s infinite;
+.centro::-webkit-scrollbar {
+    display: none;
 }
 
 .colores {
@@ -101,32 +84,229 @@
     display: block;
 }
 
+
+
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: inline-block;
+}
+
+.tit1, .tit2{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.titChico {
+    font-size: 21px;
+    margin: 20px 0px;
+    font-family: 'Corbel';
+}
+
+.titulo2{
+    opacity: 0;
+}
+
+.titulo2>.tit1{
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.titulo2>.tit2{
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    right: -2800px;
+}
+
 @keyframes title1 {
-    0% {
-        color: white;
+    from{
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        left: 0;
+        right: 0;
     }
-    20%{
-        color: rgba(255, 255, 255, 0);
-    }
-    80%{
-        color: rgba(255, 255, 255, 0);
-    }
-    100%{
-        color: white;
+    to{
+        left: -1800px;
     }
 }
 
 @keyframes title2 {
+    from{
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        right: -2800px;
+    }
+    to{
+        left: 0;
+        right: 0;
+    }
+}
+
+.texto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 77px;
+    height: 31px;
+    padding-top: 5px;
+    z-index: 1;
+    display: block;
+    background-color: rgb(36, 33, 33);
+}
+
+.bordeWrap{
+    width: 77px;
+    height: 36px;
+    position: relative;
+    display: flex;
+}
+
+.boton, .boton2{
+    display: block;
+    width: 77px;
+    height: 36px;
+    position: absolute;
+    bottom: 0;
+}
+
+.texto{
+    animation: reelBackground 5s;
+}
+
+@keyframes desvanecer1 {
     0% {
-        color: rgba(255, 255, 255, 0);
+        opacity: 0;
     }
     20%{
-        color: white;
+        opacity: 100%;
     }
-    80%{
-        color: white;
+    50%{
+        opacity: 100%;
+    }
+    60%{
+        opacity: 0;
     }
     100%{
-        color: rgba(255, 255, 255, 0);
+        opacity: 0;
     }
+}
+
+@keyframes desvanecer2 {
+    0% {
+        opacity: 100%;
+    }
+    20%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    70% {
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+@keyframes grupoT{
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+.division {
+    width: 60vw;
+    margin:20% auto;
+}
+
+.portafolio {
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.tarjetas {
+    width: 30%;
+    height: 200px;
+    color: rgb(163, 160, 160);
+    position: relative;
+}
+
+
+.caraTarjeta {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    background-color: rgb(22, 22, 22);
+    transition: .5s;
+}
+
+svg {
+    width: 50%;
+    margin-bottom: 10px;
+    fill: white;
+}
+
+.tarjetas:hover .parteOculta {
+    top: 60px;
+}
+.tarjetas:hover .caraTarjeta {
+    top: -100px;
+    background-color: rgb(36, 33, 33);
+}
+
+.caraTarjeta > span {
+    font-size: 20px;
+    font-family: 'Corbel';
+}
+
+.parteOculta {
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(22, 22, 22);
+    transition: .5s;
+}
+
+.parteOculta button {
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: rgb(22, 22, 22);
+    border-style: none;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
 }
