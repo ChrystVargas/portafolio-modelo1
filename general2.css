@@ -1,0 +1,220 @@
+.perfil {
+    color: hsl(0, 1%, 63%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.textoFondo{
+    font-size: 140px;
+    color: rgba(161, 159, 159, 0.13);
+    position: absolute;
+    right: -180px;
+    top: -80px;
+}
+
+.datosPersonales {
+    position: relative;
+    width: 40%;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+.conocenos{
+    color: white;
+    padding-bottom: 50px;
+}
+
+.check{
+    color: white;
+}
+
+.datos {
+    padding-bottom: 20px;
+}
+
+.misRedes{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.datos svg {
+    width: 40px;
+    height: 40px;
+}
+
+.descripcion {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.contactos{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactos > span{
+    padding-bottom: 15px;
+    color: white;
+}
+
+.contactos span a{
+    text-decoration: none;
+    color: white;
+    font-weight: 550;
+}
+
+.servicios, .portafolio{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.servicios > span, .portafolio > span{
+    color: hsl(0, 1%, 63%);
+    word-spacing: 10px;
+    padding-bottom: 10px;
+}
+
+.servicios > h2, .portafolio > h2{
+    font-size: 30px;
+}
+
+.categoriaServicios{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-bottom: 150px;
+}
+
+.categoriaServicios > div > svg{
+    width: 50px;
+}
+
+.cat1 > p{
+    color: hsl(0, 3%, 79%);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.puestoDesarrollador{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.tarjetaCargo{
+    background-size: cover;
+    width: 28%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.datosDesarrollador{
+    position: absolute;
+    font-size: 13px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: -100px;
+    transition: .5s;
+    padding: 10px;
+}
+
+.datosDesarrollador > span{
+    padding-bottom: 5px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.datosDesarrollador > p{
+    padding-top: 5px;
+    color: hsl(0, 1%, 65%);
+    z-index: 1;
+}
+
+.sombra {
+    position: absolute;
+    width: 110%;
+    height: 400px;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(36, 33, 33, 0.411), rgba(36, 33, 33, 0.925));
+    opacity: 0;
+    transition: 1s;
+}
+
+.zona{    
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+}
+
+.tarjetaCargo:hover .sombra{
+    opacity: 1;
+}
+
+.tarjetaCargo:hover .datosDesarrollador{
+    bottom: 0;
+}
+
+.t1{
+    background-image: url(images/tarjeta1.png);
+}
+
+.t2{
+    background-image: url(images/tarjeta2.png);
+}
+
+.t3{
+    background-image: url(images/tarjeta3.png);
+}
+
+.miPortafolio{
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.descripcionPortafolio{
+    margin-top: 50px;
+    width: 55%;
+    height: 250px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.descripcionPortafolio > span{
+    font-size: 13px;
+    color: hsl(0, 1%, 65%);
+}
+
+.descripcionPortafolio > p{
+    color: hsl(0, 1%, 65%);
+}
+
+.descripcionPortafolio > a{
+    text-decoration: none;
+    color: white;
+    width: 90px;
+    padding: 8px;
+}
+
+.descripcionPortafolio > a:hover{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+

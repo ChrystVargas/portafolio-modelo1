@@ -10,7 +10,8 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
-    background-color: rgba(36, 33, 33, 0.966);
+    background-color: rgb(36, 33, 33);
+    opacity: 0.95;
     z-index: 10;
     position: absolute;
 }
@@ -18,6 +19,25 @@ header {
 header > .navegador {
     transition: 1s;
     padding-right: 50px;
+    opacity: 0;
+}
+
+@keyframes aparecerNavegacion1{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes aparecerNavegacion2{
+    from{
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 .navegador ul li {
@@ -33,7 +53,7 @@ header > .navegador {
 
 .centroLogo {
     align-self: center;
-    margin-left: calc(50% - 70px);    
+    margin-left: calc(50% - 70px);
 }
 
 .centroLogo > .logo {
@@ -61,23 +81,22 @@ header > .navegador {
 @keyframes collap{
     from{
         height: 100vh;
-        background-color: rgba(36, 33, 33, 0.966);
-
+        opacity: 0.95;
     }
     to{
         height: 7vh;
-        background-color: rgb(36, 33, 33);
+        opacity: 1;
     }
 }
 
 @keyframes expand{
     from{
         height: 7vh;
-        background-color: rgb(36, 33, 33);
+        opacity: 1;
     }
     to{
         height: 100vh;
-        background-color: rgba(36, 33, 33, 0.966);
+        opacity: 0.95;
     }
 }
 
@@ -95,7 +114,7 @@ header > .navegador {
 @keyframes logoCentro{
     from{
         margin-left: 0;
-        padding-left: 50px;        
+        padding-left: 50px;
     }
     to{
         margin-left: calc(50% - 70px);

@@ -4,6 +4,7 @@ var Acolor = "white";
 var bordeAncho = 10;
 
 var cabeza = document.getElementsByTagName("header")[0];
+var navegador = document.getElementsByClassName("navegador")[0];
 var cuadros2 = document.getElementsByClassName("cuadro2")[0];
 var cuadros1 = document.getElementsByClassName("cuadro1")[0];
 var centroLogo = document.getElementsByClassName("centroLogo")[0];
@@ -18,8 +19,11 @@ var titulo2 = document.getElementsByClassName("tit2");
 var titulo1 = document.getElementsByClassName("tit1");
 var grupoTitulo = document.getElementsByClassName("titulo1");
 
+var chico = document.getElementsByClassName("titChico")[0]; /*    */
+
 titulo1[0].style.animation = "desvanecer1 linear 10s infinite";
 titulo2[0].style.animation = "desvanecer2 linear 10s infinite";
+
 
 function clickColor(color) {
     posicionColor = color;
@@ -33,7 +37,7 @@ function clickColor(color) {
         bordeAncho = 10;
     }
 
-    var css = '.items:hover{ background-color: ' + colores[color] + '}                                  @keyframes coloresTexto' + color + ' {from{color: ' + Acolor + '; text-shadow: 0px 0px 20px ' + Acolor + ';}to{color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}}                   @keyframes coloresCajas' + color + ' {from{border: ' + bordeAncho + 'px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 30px ' + Acolor + '; -webkit-box-shadow: 0px 0px 30px ' + Acolor + '; box-shadow: 0px 0px 30px ' + Acolor + ';}to{border: ' + bordeAncho + 'px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 30px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 30px ' + colores[color] + '; box-shadow: 0px 0px 30px ' + colores[color] + ';}}                                                                  @keyframes coloresBorde' + color + ' {from{border: 3px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 10px ' + Acolor + '; -webkit-box-shadow: 0px 0px 10px ' + Acolor + '; box-shadow: 0px 0px 10px ' + Acolor + ';}to{border: 3px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 10px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 10px ' + colores[color] + '; box-shadow: 0px 0px 10px ' + colores[color] + ';}}@keyframes coloresIconos' + color + ' {from{fill: ' + Acolor + ';}to{fill: ' + colores[color] + ';}}          svg {animation: coloresIconos' + color + ' 1s; fill: ' + colores[color] + ';}                                 .logo> span {animation: coloresTexto' + color + ' 1s; color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}                                                                                 .logo {animation: coloresCajas' + color + ' 1s; border: ' + bordeAncho + 'px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 30px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 30px ' + colores[color] + ';box-shadow: 0px 0px 30px ' + colores[color] + ';}                                                                                                             .colorTexto {animation: coloresTexto' + color + ' 1s; color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';} .colorCajaBorde {animation: coloresBorde' + color + ' 1s; border: 3px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 10px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 10px ' + colores[color] + ';box-shadow: 0px 0px 10px ' + colores[color] + ';}';
+    var css = '.items:hover{ background-color: ' + colores[color] + '}                                      @keyframes coloresTextoBrillo' + color + ' {from{color: ' + Acolor + '; text-shadow: 0px 0px 20px ' + Acolor + ';}to{color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}}                  @keyframes coloresTexto' + color + ' {from{color: ' + Acolor + ';}to{color: ' + colores[color] + ';}}                   @keyframes coloresCajas' + color + ' {from{border: ' + bordeAncho + 'px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 30px ' + Acolor + '; -webkit-box-shadow: 0px 0px 30px ' + Acolor + '; box-shadow: 0px 0px 30px ' + Acolor + ';}to{border: ' + bordeAncho + 'px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 30px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 30px ' + colores[color] + '; box-shadow: 0px 0px 30px ' + colores[color] + ';}}                                                                  @keyframes coloresBorde' + color + ' {from{border: 3px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 10px ' + Acolor + '; -webkit-box-shadow: 0px 0px 10px ' + Acolor + '; box-shadow: 0px 0px 10px ' + Acolor + ';}to{border: 3px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 10px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 10px ' + colores[color] + '; box-shadow: 0px 0px 10px ' + colores[color] + ';}}@keyframes coloresIconos' + color + ' {from{fill: ' + Acolor + ';}to{fill: ' + colores[color] + ';}}          svg, .coloresIconos {animation: coloresIconos' + color + ' 1s; fill: ' + colores[color] + ';}     .logo> span, .coloresTextoBrillo {animation: coloresTextoBrillo' + color + ' 1s; color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}   .logo {animation: coloresCajas' + color + ' 1s; border: ' + bordeAncho + 'px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 30px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 30px ' + colores[color] + ';box-shadow: 0px 0px 30px ' + colores[color] + ';}    .colorTexto {animation: coloresTexto' + color + ' 1s; color: ' + colores[color] + ';}        .colorCajaBorde {animation: coloresBorde' + color + ' 1s; border: 3px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 10px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 10px ' + colores[color] + ';box-shadow: 0px 0px 10px ' + colores[color] + ';}';
 
     Acolor = colores[color];
 
@@ -56,12 +60,15 @@ estadoPortada.addEventListener("click", function () {
         cuadros2.setAttribute("class", "colorCajaBorde cuadro2");
         cabeza.style.animation = "expand .8s";
         cabeza.style.height = "100vh";
-        cabeza.style.backgroundColor = "rgba(36, 33, 33, 0.966)";
+        cabeza.style.opacity = "0.95";
 
-        centroLogo.style.animation = "logoCentro 1s"
-        centroLogo.style.marginLeft = "calc(50% - 70px)"
+        centroLogo.style.animation = "logoCentro 1s";
+        centroLogo.style.marginLeft = "calc(50% - 70px)";
+        centroLogo.style.alignSelf = "center";
+        centroLogo.style.paddingLeft = "0";
+        centroLogo.style.marginTop = "0";
 
-        logo.style.animation = "logoGrande 1s"
+        logo.style.animation = "logoGrande 1s";
         logo.style.width = "130px";
         logo.style.height = "130px";
         logo.style.borderWidth = "10px";
@@ -72,6 +79,10 @@ estadoPortada.addEventListener("click", function () {
         span.style.animation = "spanGrande 1s"
         span.style.fontSize = "20px";
         span.style.paddingTop = "6px";
+        span.style.width = "10px";
+
+        navegador.style.animation = "aparecerNavegacion2 linear 1s";
+        navegador.style.opacity = "0";
 
         estado = false;
     } else {
@@ -79,12 +90,12 @@ estadoPortada.addEventListener("click", function () {
         cuadros2.setAttribute("class", "colorCajaBorde cuadro2");
         cabeza.style.animation = "collap .8s";
         cabeza.style.height = "7vh";
-        cabeza.style.backgroundColor = "rgb(36, 33, 33)";
+        cabeza.style.opacity = "1";
 
         centroLogo.style.animation = "logoSuperior 1s"
-        centroLogo.style.marginLeft = "0"
         centroLogo.style.paddingLeft = "50px"
         centroLogo.style.marginTop = "50px"
+        centroLogo.style.marginLeft = "0"
 
         logo.style.animation = "logoChico 1s"
         logo.style.width = "50px";
@@ -99,6 +110,9 @@ estadoPortada.addEventListener("click", function () {
         span.style.paddingTop = "0";
         span.style.width = "6px";
 
+        navegador.style.animation = "aparecerNavegacion1 linear 1s";
+        navegador.style.opacity = "100%";
+        
         setTimeout(() => {
             animacionClickLogo();
         }, 1000);
@@ -178,4 +192,55 @@ function animacionBotonReel() {
         grupoTitulo[1].style.opacity = "0";
         grupoTitulo[0].style.opacity = "100%";
     }, 7000);
+}
+
+/*En esta parte obtengo los elementos que son las tarjetas y zonas de cada esquina, en cada esquina cambio las
+propiedades de la tarjeta y da el efecto de hundirse al pasar el mouse
+*/
+
+var zona = document.getElementsByClassName("zona");
+var tarjeta = document.getElementsByClassName("tarjetaCargo");
+var tarjetaP;
+var zonaP;
+
+tarjeta[0].addEventListener("mouseover", function(){
+    zonaP = [0,1,2,3];
+    tarjetaP = 0;
+    moverTarjetas();
+})
+tarjeta[1].addEventListener("mouseover", function(){
+    tarjetaP = 1;
+    zonaP = [4,5,6,7];
+    moverTarjetas();
+})
+tarjeta[2].addEventListener("mouseover", function(){
+    tarjetaP = 2;
+    zonaP = [8,9,10,11];
+    moverTarjetas();
+})
+
+function moverTarjetas() {
+    tarjeta[tarjetaP].addEventListener("mouseout", function () {
+        tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)";
+    })    
+    
+    zona[zonaP[0]].addEventListener("mouseover", function(){
+        tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, -.0001, 0, 1, 0, -.0001, 0, 0, 1, 0, 0, 0, 0, 1)";
+    })
+    
+    zona[zonaP[1]].addEventListener("mouseover", function(){
+        tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, .0001, 0, 1, 0, -.0001, 0, 0, 1, 0, 0, 0, 0, 1)";
+    })
+    
+    zona[zonaP[2]].addEventListener("mouseover", function(){
+        tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, -.0001, 0, 1, 0, .0001, 0, 0, 1, 0, 0, 0, 0, 1)";
+    })
+    
+    zona[zonaP[3]].addEventListener("mouseover", function(){
+        tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, .0001, 0, 1, 0, .0001, 0, 0, 1, 0, 0, 0, 0, 1)";
+    })    
+    
+    tarjeta[tarjetaP].addEventListener("mouseout", function () {
+        tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)";
+    })    
 }
