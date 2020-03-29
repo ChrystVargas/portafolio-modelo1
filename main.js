@@ -24,6 +24,7 @@ var estadoClickColor = 1;
 var titulo2 = document.getElementsByClassName("tit2");
 var titulo1 = document.getElementsByClassName("tit1");
 var grupoTitulo = document.getElementsByClassName("titulo1");
+var texto = document.getElementsByClassName("texto")[0];
 
 var posicionNavegador = 0;
 
@@ -38,6 +39,7 @@ function clickColor(color) {
         cuadros2.style.background = "rgb(24, 24, 24)";
         cabeza.style.background = "rgb(36, 33, 33)";
         contenedor.style.background = "rgb(36, 33, 33)";
+        texto.style.background = "rgb(36, 33, 33)";
 
         estadoClickColor = 0;
     } else {
@@ -45,6 +47,7 @@ function clickColor(color) {
         cuadros2.style.background = "rgb(36, 33, 33)";
         cabeza.style.background = "rgb(24, 24, 24)";
         contenedor.style.background = "rgb(24, 24, 24)";
+        texto.style.background = "rgb(24, 24, 24)";
 
         estadoClickColor = 1;
     }
@@ -191,7 +194,7 @@ function animacionBotonReel() {
 
     var colorDegradado = [["rgb(4, 212, 4)", "rgba(4, 212, 4, 0.459)", "rgba(4, 212, 4, 0.164)"], ["red", "rgba(255, 0, 0, 0.507)", "rgba(255, 0, 0, 0.39)"], ["rgb(255, 102, 0)", "rgba(255, 102, 0, 0.493)", "rgba(255, 102, 0, 0.151)"], ["rgb(226, 222, 0)", "rgba(226, 222, 0, 0.486)", "rgba(226, 222, 0, 0.137)"], ["deepskyblue", "rgba(0, 191, 255, 0.452)", "rgba(0, 191, 255, 0.151)"], ["white", "rgba(255, 255, 255, 0.548)", "rgba(255, 255, 255, 0.185)"]];
 
-    var css = '@keyframes botonAbajo' + posicionColor + ' {from{background: linear-gradient(to left, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);right: 0px;width: 0%;bottom: -1px;}70%{background: linear-gradient(to left, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);right: 0px;width: 100%;bottom: -1px;}to{ background: linear-gradient(to left, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);right: 70px;width: 8%;bottom: -1px;}} @keyframes botonArriba' + posicionColor + ' {from{background: linear-gradient(to right, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);width: 0%;padding-top: 1px;}70%{background: linear-gradient(to right, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);left: 0px;width: 100%;padding-top: 1px;}to{ background: linear-gradient(to right, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);left: 70px;width: 8%;padding-top: 1px;}}   @keyframes botonIzquierda' + posicionColor + ' {from{background: linear-gradient(to top, ' + colorDegradado[posicionColor][1] + ' 0%, ' + colorDegradado[posicionColor][0] + ' 100%);left: -1px;height: 0%;bottom: 0;}70%{background: linear-gradient(to top, ' + colorDegradado[posicionColor][1] + ' 0%, ' + colorDegradado[posicionColor][0] + ' 100%);left: -1px;height: 100%;bottom: 0;}to{background: linear-gradient(to top, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);left: -1px;height: 1%;bottom: 100%;}} @keyframes botonDerecha' + posicionColor + ' {from{background: linear-gradient(to bottom, ' + colorDegradado[posicionColor][1] + ' 0%, ' + colorDegradado[posicionColor][0] + ' 100%);padding-right: 1px;height: 0%;top: -1px;right: -1px;width: 1px;}70%{background: linear-gradient(to bottom, ' + colorDegradado[posicionColor][1] + ' 10%, ' + colorDegradado[posicionColor][0] + ' 100%);padding-right: 1px;height: 100%;top: 0;right: -1px;width: 1px;}to{background: linear-gradient(to bottom, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);padding-right: 1px;height: 0%;top: 100%;right: -1px;width: 1px;}}   @keyframes reelBackground' + posicionColor + ' {from{background-color: rgb(36, 33, 33);color: ' + colorDegradado[posicionColor][0] + ';}20%{background-color: ' + colorDegradado[posicionColor][0] + ';box-shadow: 0px 0px 30px ' + colorDegradado[posicionColor][0] + ';color: ' + colorDegradado[5][0] + '; text-shadow: 0px 0px 20px white;} 70%{background-color: ' + colorDegradado[posicionColor][0] + ';box-shadow: 0px 0px 30px ' + colorDegradado[posicionColor][0] + ';color: ' + colorDegradado[5][0] + ';text-shadow: 0px 0px 20px ' + colorDegradado[5][0] + ';} to{background-color: rgb(36, 33, 33);color: ' + colorDegradado[posicionColor][0] + ';}}';
+    var css = '@keyframes botonAbajo' + posicionColor + ' {from{background: linear-gradient(to left, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);right: 0px;width: 0%;bottom: -1px;}70%{background: linear-gradient(to left, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);right: 0px;width: 100%;bottom: -1px;}to{ background: linear-gradient(to left, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);right: 70px;width: 8%;bottom: -1px;}} @keyframes botonArriba' + posicionColor + ' {from{background: linear-gradient(to right, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);width: 0%;padding-top: 1px;}70%{background: linear-gradient(to right, ' + colorDegradado[posicionColor][1] + ' 20%, ' + colorDegradado[posicionColor][0] + ' 100%);left: 0px;width: 100%;padding-top: 1px;}to{ background: linear-gradient(to right, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);left: 70px;width: 8%;padding-top: 1px;}}   @keyframes botonIzquierda' + posicionColor + ' {from{background: linear-gradient(to top, ' + colorDegradado[posicionColor][1] + ' 0%, ' + colorDegradado[posicionColor][0] + ' 100%);left: -1px;height: 0%;bottom: 0;}70%{background: linear-gradient(to top, ' + colorDegradado[posicionColor][1] + ' 0%, ' + colorDegradado[posicionColor][0] + ' 100%);left: -1px;height: 100%;bottom: 0;}to{background: linear-gradient(to top, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);left: -1px;height: 1%;bottom: 100%;}} @keyframes botonDerecha' + posicionColor + ' {from{background: linear-gradient(to bottom, ' + colorDegradado[posicionColor][1] + ' 0%, ' + colorDegradado[posicionColor][0] + ' 100%);padding-right: 1px;height: 0%;top: -1px;right: -1px;width: 1px;}70%{background: linear-gradient(to bottom, ' + colorDegradado[posicionColor][1] + ' 10%, ' + colorDegradado[posicionColor][0] + ' 100%);padding-right: 1px;height: 100%;top: 0;right: -1px;width: 1px;}to{background: linear-gradient(to bottom, rgb(36, 33, 33) 20%, ' + colorDegradado[posicionColor][0] + ' 100%);padding-right: 1px;height: 0%;top: 100%;right: -1px;width: 1px;}}   @keyframes reelBackground' + posicionColor + ' {from{background-color: rgb(36, 33, 33); color: ' + colorDegradado[posicionColor][0] + ';}20%{background-color: ' + colorDegradado[posicionColor][0] + ';box-shadow: 0px 0px 30px ' + colorDegradado[posicionColor][0] + ';color: ' + colorDegradado[5][0] + '; text-shadow: 0px 0px 20px white;} 70%{background-color: ' + colorDegradado[posicionColor][0] + ';box-shadow: 0px 0px 30px ' + colorDegradado[posicionColor][0] + ';color: ' + colorDegradado[5][0] + ';text-shadow: 0px 0px 20px ' + colorDegradado[5][0] + ';} to{background-color: rgb(36, 33, 33);color: ' + colorDegradado[posicionColor][0] + ';}}';
 
     var style = document.createElement('style');
     style.setAttribute("id", "estiloColorBotonReel");
@@ -314,10 +317,10 @@ centroCuerpo.addEventListener('scroll', function () {
     } else if (porcentaje >= 24 & porcentaje < 50.9) {
         marcarNavegador(2);
         simpleParallax[1].style.opacity = "1";
-    } else if (porcentaje >= 50.9 & porcentaje < 83) {
+    } else if (porcentaje >= 50.9 & porcentaje < 78) {
         marcarNavegador(3);
         simpleParallax[2].style.opacity = "1";
-    } else if (porcentaje >= 83) {
+    } else if (porcentaje >= 78) {
         marcarNavegador(4);
         simpleParallax[3].style.opacity = "1";
     }

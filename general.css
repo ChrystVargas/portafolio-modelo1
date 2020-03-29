@@ -122,6 +122,11 @@
     font-family: 'Corbel';
 }
 
+
+.reel1{    
+    padding-top: 5px;
+}
+
 .titulo2{
     opacity: 0;
 }
@@ -172,11 +177,12 @@
     top: 0;
     left: 0;
     width: 77px;
-    height: 31px;
+    height: 31px;    
     padding-top: 5px;
     z-index: 1;
     display: block;
-    background-color: rgb(36, 33, 33);
+    background-color: rgb(24, 24, 24);
+    transition: 1s;
 }
 
 .bordeWrap{
@@ -192,10 +198,6 @@
     height: 36px;
     position: absolute;
     bottom: 0;
-}
-
-.texto{
-    animation: reelBackground 5s;
 }
 
 @keyframes desvanecer1 {
