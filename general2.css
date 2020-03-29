@@ -39,8 +39,11 @@
 }
 
 .datos svg {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(46, 46, 46);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .descripcion {
@@ -290,3 +293,7 @@
     transition: 1s;
 }
 
+.simpleParallax{
+    transition: 1s;
+    opacity: 0;
+}
