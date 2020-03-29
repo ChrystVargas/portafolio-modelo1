@@ -4,7 +4,10 @@ var Acolor = "white";
 var bordeAncho = 10;
 
 var cabeza = document.getElementsByTagName("header")[0];
+var centroCuerpo = document.getElementsByClassName("centro")[0];
 var navegador = document.getElementsByClassName("navegador")[0];
+var barraS = document.getElementsByClassName("barraScroll")[0];
+var barra = document.getElementsByClassName("barra")[0];
 var cuadros2 = document.getElementsByClassName("cuadro2")[0];
 var cuadros1 = document.getElementsByClassName("cuadro1")[0];
 var centroLogo = document.getElementsByClassName("centroLogo")[0];
@@ -18,8 +21,6 @@ var estado = false;
 var titulo2 = document.getElementsByClassName("tit2");
 var titulo1 = document.getElementsByClassName("tit1");
 var grupoTitulo = document.getElementsByClassName("titulo1");
-
-var chico = document.getElementsByClassName("titChico")[0]; /*    */
 
 titulo1[0].style.animation = "desvanecer1 linear 10s infinite";
 titulo2[0].style.animation = "desvanecer2 linear 10s infinite";
@@ -37,7 +38,7 @@ function clickColor(color) {
         bordeAncho = 10;
     }
 
-    var css = '.items:hover{ background-color: ' + colores[color] + '}                                      @keyframes coloresTextoBrillo' + color + ' {from{color: ' + Acolor + '; text-shadow: 0px 0px 20px ' + Acolor + ';}to{color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}}                  @keyframes coloresTexto' + color + ' {from{color: ' + Acolor + ';}to{color: ' + colores[color] + ';}}                   @keyframes coloresCajas' + color + ' {from{border: ' + bordeAncho + 'px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 30px ' + Acolor + '; -webkit-box-shadow: 0px 0px 30px ' + Acolor + '; box-shadow: 0px 0px 30px ' + Acolor + ';}to{border: ' + bordeAncho + 'px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 30px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 30px ' + colores[color] + '; box-shadow: 0px 0px 30px ' + colores[color] + ';}}                                                                  @keyframes coloresBorde' + color + ' {from{border: 3px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 10px ' + Acolor + '; -webkit-box-shadow: 0px 0px 10px ' + Acolor + '; box-shadow: 0px 0px 10px ' + Acolor + ';}to{border: 3px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 10px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 10px ' + colores[color] + '; box-shadow: 0px 0px 10px ' + colores[color] + ';}}@keyframes coloresIconos' + color + ' {from{fill: ' + Acolor + ';}to{fill: ' + colores[color] + ';}}          svg, .coloresIconos {animation: coloresIconos' + color + ' 1s; fill: ' + colores[color] + ';}     .logo> span, .coloresTextoBrillo {animation: coloresTextoBrillo' + color + ' 1s; color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}   .logo {animation: coloresCajas' + color + ' 1s; border: ' + bordeAncho + 'px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 30px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 30px ' + colores[color] + ';box-shadow: 0px 0px 30px ' + colores[color] + ';}    .colorTexto {animation: coloresTexto' + color + ' 1s; color: ' + colores[color] + ';}        .colorCajaBorde {animation: coloresBorde' + color + ' 1s; border: 3px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 10px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 10px ' + colores[color] + ';box-shadow: 0px 0px 10px ' + colores[color] + ';}';
+    var css = '.items:hover{ background-color: ' + colores[color] + '}                                      @keyframes coloresTextoBrillo' + color + ' {from{color: ' + Acolor + '; text-shadow: 0px 0px 20px ' + Acolor + ';}to{color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}}                  @keyframes coloresTexto' + color + ' {from{color: ' + Acolor + ';}to{color: ' + colores[color] + ';}}                   @keyframes coloresCajas' + color + ' {from{border: ' + bordeAncho + 'px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 30px ' + Acolor + '; -webkit-box-shadow: 0px 0px 30px ' + Acolor + '; box-shadow: 0px 0px 30px ' + Acolor + ';}to{border: ' + bordeAncho + 'px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 30px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 30px ' + colores[color] + '; box-shadow: 0px 0px 30px ' + colores[color] + ';}}                                                                  @keyframes coloresBorde' + color + ' {from{border: 3px solid ' + Acolor + '; -moz-box-shadow: 0px 0px 10px ' + Acolor + '; -webkit-box-shadow: 0px 0px 10px ' + Acolor + '; box-shadow: 0px 0px 10px ' + Acolor + ';}to{border: 3px solid ' + colores[color] + '; -moz-box-shadow: 0px 0px 10px ' + colores[color] + '; -webkit-box-shadow: 0px 0px 10px ' + colores[color] + '; box-shadow: 0px 0px 10px ' + colores[color] + ';}}@keyframes coloresIconos' + color + ' {from{fill: ' + Acolor + ';}to{fill: ' + colores[color] + ';}}          .coloresIconos {animation: coloresIconos' + color + ' 1s; fill: ' + colores[color] + ';}     .logo> span, .coloresTextoBrillo {animation: coloresTextoBrillo' + color + ' 1s; color: ' + colores[color] + '; text-shadow: 0px 0px 20px ' + colores[color] + ';}   .logo {animation: coloresCajas' + color + ' 1s; border: ' + bordeAncho + 'px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 30px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 30px ' + colores[color] + ';box-shadow: 0px 0px 30px ' + colores[color] + ';}    .colorTexto {animation: coloresTexto' + color + ' 1s; color: ' + colores[color] + ';}        .colorCajaBorde {animation: coloresBorde' + color + ' 1s; border: 3px solid ' + colores[color] + ';-moz-box-shadow: 0px 0px 10px ' + colores[color] + ';-webkit-box-shadow: 0px 0px 10px ' + colores[color] + ';box-shadow: 0px 0px 10px ' + colores[color] + ';} .navegador a:hover {color: ' + colores[color] + ';}   .barra{background-color: ' + colores[color] + ';}';
 
     Acolor = colores[color];
 
@@ -84,6 +85,12 @@ estadoPortada.addEventListener("click", function () {
         navegador.style.animation = "aparecerNavegacion2 linear 1s";
         navegador.style.opacity = "0";
 
+        barraS.style.animation = "aparecerNavegacion2 linear 1s";
+        barraS.style.opacity = "0";
+
+        barra.style.animation = "aparecerNavegacion2 linear 1s";
+        barra.style.opacity = "0";
+
         estado = false;
     } else {
         cuadros1.setAttribute("class", "colorCajaBorde cuadro1");
@@ -112,7 +119,13 @@ estadoPortada.addEventListener("click", function () {
 
         navegador.style.animation = "aparecerNavegacion1 linear 1s";
         navegador.style.opacity = "100%";
-        
+
+        barraS.style.animation = "aparecerNavegacion1 linear 1s";
+        barraS.style.opacity = "100%";
+
+        barra.style.animation = "aparecerNavegacion1 linear 1s";
+        barra.style.opacity = "100%";
+
         setTimeout(() => {
             animacionClickLogo();
         }, 1000);
@@ -203,44 +216,71 @@ var tarjeta = document.getElementsByClassName("tarjetaCargo");
 var tarjetaP;
 var zonaP;
 
-tarjeta[0].addEventListener("mouseover", function(){
-    zonaP = [0,1,2,3];
+tarjeta[0].addEventListener("mouseover", function () {
+    zonaP = [0, 1, 2, 3];
     tarjetaP = 0;
     moverTarjetas();
 })
-tarjeta[1].addEventListener("mouseover", function(){
+tarjeta[1].addEventListener("mouseover", function () {
     tarjetaP = 1;
-    zonaP = [4,5,6,7];
+    zonaP = [4, 5, 6, 7];
     moverTarjetas();
 })
-tarjeta[2].addEventListener("mouseover", function(){
+tarjeta[2].addEventListener("mouseover", function () {
     tarjetaP = 2;
-    zonaP = [8,9,10,11];
+    zonaP = [8, 9, 10, 11];
     moverTarjetas();
 })
 
 function moverTarjetas() {
     tarjeta[tarjetaP].addEventListener("mouseout", function () {
         tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)";
-    })    
-    
-    zona[zonaP[0]].addEventListener("mouseover", function(){
+    })
+
+    zona[zonaP[0]].addEventListener("mouseover", function () {
         tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, -.0001, 0, 1, 0, -.0001, 0, 0, 1, 0, 0, 0, 0, 1)";
     })
-    
-    zona[zonaP[1]].addEventListener("mouseover", function(){
+
+    zona[zonaP[1]].addEventListener("mouseover", function () {
         tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, .0001, 0, 1, 0, -.0001, 0, 0, 1, 0, 0, 0, 0, 1)";
     })
-    
-    zona[zonaP[2]].addEventListener("mouseover", function(){
+
+    zona[zonaP[2]].addEventListener("mouseover", function () {
         tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, -.0001, 0, 1, 0, .0001, 0, 0, 1, 0, 0, 0, 0, 1)";
     })
-    
-    zona[zonaP[3]].addEventListener("mouseover", function(){
+
+    zona[zonaP[3]].addEventListener("mouseover", function () {
         tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, .0001, 0, 1, 0, .0001, 0, 0, 1, 0, 0, 0, 0, 1)";
-    })    
-    
+    })
+
     tarjeta[tarjetaP].addEventListener("mouseout", function () {
         tarjeta[tarjetaP].style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)";
-    })    
+    })
 }
+
+
+function marcarNavegador(posicion) {
+    var itemNavegador = document.querySelectorAll(".navegador a");
+
+    barra.scrollTop = barra.scrollHeight;
+
+    itemNavegador[0].style.color = "";
+    itemNavegador[1].style.color = "";
+    itemNavegador[2].style.color = "";
+    itemNavegador[3].style.color = "";
+    itemNavegador[4].style.color = "";
+    itemNavegador[5].style.color = "";
+
+    itemNavegador[posicion].style.color = colores[posicionColor];
+}
+
+
+centroCuerpo.addEventListener('scroll', function () {
+    var porcentaje = ((centroCuerpo.scrollTop * 100) / 4570);
+    console.log(porcentaje);
+    barra.style.width = porcentaje + "%";
+    
+    if (porcentaje > 90) {
+        barra.style.width = porcentaje + 10 + "%";
+    }   
+});

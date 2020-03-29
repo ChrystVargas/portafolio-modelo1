@@ -49,6 +49,7 @@ header > .navegador {
     text-decoration: none;
     color: white;
     font-weight: 500;
+    transition: .5s;
 }
 
 .centroLogo {
